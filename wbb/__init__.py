@@ -106,8 +106,10 @@ loop.run_until_complete(load_sudoers())
 
 if not SESSION_STRING:
     app2 = Client(
-        name="sessions/userbot",
+        name="userbot",
+        # name="sessions/userbot",
         api_id=API_ID,
+        bot_token=BOT_TOKEN,
         api_hash=API_HASH,
         phone_number=PHONE_NUMBER,
     )
