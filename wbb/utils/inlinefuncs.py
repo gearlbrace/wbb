@@ -60,7 +60,7 @@ from wbb import (
 from wbb.core.keyboard import ikb
 from wbb.core.tasks import _get_tasks_text, all_tasks, rm_task
 from wbb.modules.info import get_chat_info, get_user_info
-from wbb.modules.music import download_youtube_audio
+# from wbb.modules.music import download_youtube_audio
 from wbb.utils.functions import test_speedtest
 from wbb.utils.pastebin import paste
 
@@ -80,8 +80,8 @@ keywords_list = [
     "google",
     "torrent",
     "wiki",
-    "music",
-    "ytmusic",
+#    "music",
+#    "ytmusic",
 ]
 
 
@@ -441,6 +441,7 @@ async def tg_search_func(answers, text, user_id):
     return answers
 
 
+"""
 async def music_inline_func(answers, query):
     chat_id = -1001445180719
     group_invite = "https://t.me/joinchat/vSDE2DuGK4Y4Nzll"
@@ -484,7 +485,7 @@ async def music_inline_func(answers, query):
         )
         for message_ in messages
     ]
-
+"""
 
 async def wiki_func(answers, text):
     data = await arq.wiki(text)
@@ -613,6 +614,7 @@ async def ping_func(answers):
     return answers
 
 
+"""
 async def yt_music_func(answers, url):
     arq_resp = await arq.youtube(url)
     loop = asyncio.get_running_loop()
@@ -650,7 +652,7 @@ async def yt_music_func(answers, url):
         )
     )
     return answers
-
+"""
 
 async def info_inline_func(answers, peer):
     not_found = InlineQueryResultArticle(
