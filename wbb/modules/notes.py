@@ -176,7 +176,7 @@ async def get_notes(_, message):
     _notes.sort()
     msg = f"List of notes in {'USERBOT' if is_ubot else message.chat.title}\n"
     for note in _notes:
-        msg += f"**-** `{note}`\n"
+        msg += f"**-** `#{note}`\n"
     await eor(message, text=msg)
 
 
